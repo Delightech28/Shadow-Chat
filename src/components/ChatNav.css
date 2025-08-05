@@ -1,0 +1,145 @@
+.chat-nav {
+  width: 160px;
+  min-width: 90px;
+  background: #101010;
+  border: 2px solid #00FF00;
+  border-radius: 12px;
+  margin: 18px 0;
+  box-shadow: 0 0 24px #00FF0033;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  font-size: 1rem;
+  color: #00FF00;
+  z-index: 2;
+  height: calc(100vh - 36px);
+  transition: left 0.3s, right 0.3s, opacity 0.3s;
+}
+
+.chat-nav-left {
+  margin-left: 18px;
+  margin-right: 8px;
+}
+
+.chat-nav-right {
+  margin-right: 18px;
+  margin-left: 8px;
+}
+
+.nav-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.2em;
+  color: #00FF00;
+  text-align: center;
+  border-bottom: 1px solid #00FF00;
+  width: 100%;
+  padding-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.nav-user,
+.nav-action {
+  padding: 0.5em 0.3em;
+  border-radius: 6px;
+  background: #181818;
+  color: #00FF00;
+  border: 1px solid #00FF00;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.nav-user.active,
+.nav-action:hover,
+.nav-user:hover {
+  background: #00FF00;
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .chat-nav {
+    width: 60px;
+    min-width: 60px;
+    font-size: 0.85rem;
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+  }
+
+  .nav-title {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 600px) {
+  .chat-nav {
+    flex-direction: row;
+    width: 100vw;
+    min-width: 0;
+    height: auto;
+    margin: 0 0 8px 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    justify-content: flex-start;
+    padding: 0.5rem 0.2rem;
+    position: fixed;
+    left: -100vw;
+    right: auto;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .chat-nav.show {
+    left: 0;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 99;
+  }
+
+  .chat-nav-right {
+    top: auto;
+    bottom: 0;
+    left: -100vw;
+    right: auto;
+  }
+
+  .chat-nav-right.show {
+    left: 0;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 99;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 0.5em;
+    width: auto;
+  }
+
+  .nav-user,
+  .nav-action {
+    padding: 0.3em 0.5em;
+    font-size: 0.8rem;
+  }
+} 

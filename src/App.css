@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Share Tech Mono', 'Source Code Pro', monospace;
+  background: #000;
+  color: #e0ffe0;
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+  background: #000;
+}
+
+/* Global button styles */
+.btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00FF00;
+  background: #000;
+  border: 2px solid #00FF00;
+  border-radius: 6px;
+  box-shadow: 0 0 12px #00FF00aa;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-family: inherit;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #00FF00;
+  color: #000;
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Global input styles */
+.input {
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #00FF00;
+  background: #181818;
+  color: #00FF00;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.input:focus {
+  border: 2px solid #00FF00;
+}
+
+/* Container styles */
+.container {
+  background: #101010;
+  border: 2px solid #00FF00;
+  border-radius: 12px;
+  box-shadow: 0 0 32px #00FF0033;
+  padding: 2rem;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+} 
